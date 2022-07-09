@@ -17,10 +17,10 @@ const config = {
 
     dest: {
         root: destPath,
-        css: `${destPath}/static/css`,
-        js: `${destPath}/static/js`,
-        images: `${destPath}/static/images`,
-        fonts: `${destPath}/static/fonts`,
+        css: `${destPath}/assets/css`,
+        js: `${destPath}/assets/js`,
+        images: `${destPath}/assets/images`,
+        fonts: `${destPath}/assets/fonts`,
     },
 
     rootFolder: rootFolder,

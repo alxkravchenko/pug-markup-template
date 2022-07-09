@@ -20,8 +20,6 @@
     "license": "ISC",
     "type": "module",
     "devDependencies": {
-        "@babel/core": "^7.18.2",
-        "@babel/preset-env": "^7.18.2",
         "@zoxon/emitty": "^1.4.2",
         "autoprefixer": "^10.4.7",
         "babel-loader": "^8.2.5",

@@ -12,11 +12,11 @@ html(lang="en")
         meta(name="viewport" content="width=device-width,initial-scale=1")
         meta(name="keywords" content="Site example")
         meta(name="description" content="This is description placeholder")
-        link(rel="preload" href="static/fonts/sfpro/sfproregular.woff" as="font" type="font/woff" crossorigin)
-        link(rel="preload" href="static/fonts/sfpro/sfpromedium.woff" as="font" type="font/woff" crossorigin)
-        link(rel="preload" href="static/fonts/sfpro/sfprosemibold.woff" as="font" type="font/woff" crossorigin)
-        link(rel="preload" href="static/fonts/sfpro/sfprobold.woff" as="font" type="font/woff" crossorigin)
-        link(rel="stylesheet" type='text/css' href="./static/css/style.min.css")
+        link(rel="preload" href="assets/fonts/sfpro/sfproregular.woff" as="font" type="font/woff" crossorigin)
+        link(rel="preload" href="assets/fonts/sfpro/sfpromedium.woff" as="font" type="font/woff" crossorigin)
+        link(rel="preload" href="assets/fonts/sfpro/sfprosemibold.woff" as="font" type="font/woff" crossorigin)
+        link(rel="preload" href="assets/fonts/sfpro/sfprobold.woff" as="font" type="font/woff" crossorigin)
+        link(rel="stylesheet" type='text/css' href="./assets/css/style.min.css")
     body
         .wrapper
             include ../partials/header/header
@@ -25,5 +25,5 @@ html(lang="en")
             include ../partials/footer/footer
             block modals
         //- script(src="./js/vendor/jquery-3.3.1.min.js")
-        script(src="./static/js/main.min.js")
+        script(src="./assets/js/main.min.js")
         block script

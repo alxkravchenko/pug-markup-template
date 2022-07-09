@@ -38,7 +38,7 @@ export const pugBuild = () => (
             pretty: true,
         }))
         .pipe(gulpif(config.isProd, formatHtml({ indent_size: 4 })))
-        .pipe(replace(/@img\//g, 'static/images/'))
+        .pipe(replace(/@img\//g, 'assets/images/'))
         .pipe(gulp.dest(config.dest.root))
 );
 
