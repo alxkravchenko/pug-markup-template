@@ -1,0 +1,14 @@
+mixin footerNavLink(link, text, active)
+    if (active)
+        li.footer-nav__item
+            a(href=link).footer-nav__link.footer-nav__link--active= text
+    else
+        li.footer-nav__item
+            a(href=link).footer-nav__link= text
+
+footer.footer
+    .container.header__content
+        nav.footer-nav
+            ul.footer-nav__list
+                +footerNavLink('#', 'Home', 'a')
+                +footerNavLink('#', 'About')

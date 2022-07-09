@@ -1,0 +1,29 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="Site example")
+        meta(name="description" content="This is description placeholder")
+        link(rel="preload" href="static/fonts/sfpro/sfproregular.woff" as="font" type="font/woff" crossorigin)
+        link(rel="preload" href="static/fonts/sfpro/sfpromedium.woff" as="font" type="font/woff" crossorigin)
+        link(rel="preload" href="static/fonts/sfpro/sfprosemibold.woff" as="font" type="font/woff" crossorigin)
+        link(rel="preload" href="static/fonts/sfpro/sfprobold.woff" as="font" type="font/woff" crossorigin)
+        link(rel="stylesheet" type='text/css' href="./static/css/style.min.css")
+    body
+        .wrapper
+            include ../partials/header/header
+            main(class=mainClass)
+                block content
+            include ../partials/footer/footer
+            block modals
+        //- script(src="./js/vendor/jquery-3.3.1.min.js")
+        script(src="./static/js/main.min.js")
+        block script

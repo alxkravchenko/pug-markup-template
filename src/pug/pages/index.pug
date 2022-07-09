@@ -1,0 +1,25 @@
+extends ../layout/main
+
+block variables
+    -var title = 'Index page'
+    -var mainClass = 'content'
+
+block content
+    //- img(src="@img/global/test.jpg", alt="test")
+    .swiper
+        .swiper-wrapper
+            .swiper-slide
+                +picg('test', 'jpg', 'test image')
+            .swiper-slide
+                +picg('test', 'jpg', 'test image')
+            .swiper-slide
+                +picg('test', 'jpg', 'test image')
+            .swiper-slide
+                +picg('test', 'jpg', 'test image')
+
+
+block modals
+    //- include ../partials/modals/example-modal
+
+block script
+    //- script(src="./assets/js/home.js")

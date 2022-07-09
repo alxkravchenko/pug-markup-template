@@ -1,0 +1,17 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src:
+            url(#{$path}.woff) format("woff");
+            // url(#{$path}.woff2) format("woff2"),
+            // url(#{$path}.ttf) format("truetype");
+            // url(#{$path}.otf) format("opentype");
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@include font-face('SFpro', '../fonts/sfpro/sfproregular', 400, 'normal');
+@include font-face('SFpro', '../fonts/sfpro/sfpromedium', 500, 'normal');
+@include font-face('SFpro', '../fonts/sfpro/sfprosemibold', 600, 'normal');
