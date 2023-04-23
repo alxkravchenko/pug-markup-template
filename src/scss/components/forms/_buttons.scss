@@ -1,0 +1,21 @@
+.btn {
+	display: inline-flex;
+	padding: .5rem 1rem;
+	text-align: center;
+	white-space: nowrap;
+	border: none;
+	cursor: pointer;
+	&.btn--primary_mod {
+		background-color: var(--blue);
+		color: #fff;
+		transition: background-color .2s ease-out;
+		&:hover {
+			background-color: #0b5ed7;
+		}
+	}
+}
+
+.btn.focus-visible {
+	border-color: var(--lightblue);
+	box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}

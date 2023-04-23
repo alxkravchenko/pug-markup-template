@@ -1,10 +1,9 @@
 // Utils
 @import "./utils/libs";
 @import "./utils/vars";
-@import "./utils/mixins";
+@import "./utils/helpers";
 @import "./utils/fonts";
 @import "./utils/base";
 
 // Components, pages
 @import "./components/**/*.scss";
-@import "./pages/**/*.scss";
