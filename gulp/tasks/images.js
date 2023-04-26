@@ -25,7 +25,13 @@ const convertToWebp = () => (
 		.pipe(imagemin([
 			imageminWebp({ quality: 80 })
 		]))
-		.pipe(rename({ extname: '.webp', }))
+		.pipe(rename(function (path) {
+			return {
+				dirname: path.dirname,
+				basename: path.basename + path.extname,
+				extname: ".webp"
+			};
+		}))
 		.pipe(gulp.dest(config.dest.images))
 );
 
