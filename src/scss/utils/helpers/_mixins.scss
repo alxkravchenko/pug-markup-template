@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin flex_block($flex-direction: row, $flex-wrap: wrap, $content: space-between, $align-items: flex-start, $align-content: flex-start) {
 	display: flex;
 	flex-direction: $flex-direction;
@@ -37,6 +39,10 @@
 	}
 }
 
-@function rem($size) {
-	@return $size / $root-font-size * 1rem;
+// @function rem($size) {
+// 	@return $size / $root-font-size * 1rem;
+// }
+
+@function rem($value) {
+	@return math.div($value, 16) + rem;
 }
