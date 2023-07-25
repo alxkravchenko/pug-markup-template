@@ -4,7 +4,7 @@
 	"description": "Gulp starter",
 	"scripts": {
 		"dev": "gulp watch",
-		"prod": "gulp build --prod",
+		"build": "gulp build --prod",
 		"cache": "gulp cache",
 		"zip": "gulp zip",
 		"validate": "w3c-html-validator"

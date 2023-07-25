@@ -2,7 +2,7 @@ import path from 'path';
 
 const rootFolder = path.basename(path.resolve());
 const srcPath = 'src';
-const destPath = 'dist';
+const destPath = 'build';
 
 const config = {
 	src: {
