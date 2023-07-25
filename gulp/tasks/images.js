@@ -12,8 +12,8 @@ const copyImages = () => (
 		.pipe(changed(config.dest.images))
 		.pipe(gulpif(config.isProd, imagemin([
 			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({ quality: 85 }),
-			imageminPngquant({ quality: [0.8, 0.9] }),
+			imagemin.mozjpeg({ quality: 90 }),
+			imageminPngquant({ quality: [0.9, 0.91] }),
 			imagemin.svgo({ plugins: [{ removeViewBox: true }, { cleanupIDs: false }] }),
 		])))
 		.pipe(gulp.dest(config.dest.images))
@@ -23,7 +23,7 @@ const convertToWebp = () => (
 	gulp.src(`${config.src.images}/**/*.{png,jpg,jpeg}`)
 		.pipe(changed(config.dest.images, { extension: '.webp' }))
 		.pipe(imagemin([
-			imageminWebp({ quality: 85 })
+			imageminWebp({ quality: 90 })
 		]))
 		.pipe(rename(function (path) {
 			return {

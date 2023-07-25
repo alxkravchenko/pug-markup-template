@@ -1,20 +1,30 @@
 html {
 	font-family: var(--font-1);
-	// font-size: calc(100vw / 1920 * 10);
-	font-size: 62.5%;
 	height: 100%;
 	text-size-adjust: 100%;
+
+	@include bp(2201px, min) {
+		font-size: calc(100vw / 2201 * 10);
+	}
+	@include bp(2200px, $point_7) {
+		font-size: 62.5%;
+	}
+
+	@include bp($point_7 - 1) {
+		font-size: calc(100vw / 374 * 10);
+	}
 }
 
 body {
 	height: 100%;
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.5;
 	background-color: #fff;
-	color: var(--text);
-	&.locked_state {
+	color: var(--black-1);
+	&.locked_state,
+	&.body--open_menu_state {
 		overflow: hidden;
 		touch-action: none;
 	}
@@ -26,7 +36,7 @@ body {
 	box-sizing: border-box;
 }
 
-ul,ol {
+ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -57,6 +67,34 @@ blockquote,
 dl,
 dd {
 	margin: 0;
+}
+
+h1 {
+	@include h1;
+}
+
+h2 {
+	@include h2;
+}
+
+h3 {
+	@include h3;
+}
+
+h4 {
+	@include h4;
+}
+
+h5 {
+	@include h5;
+}
+
+h6 {
+	@include h6;
+}
+
+p, a {
+	@include text;
 }
 
 a:not([class]) {
@@ -119,6 +157,10 @@ main {
 	flex: 1 1 auto;
 }
 
+section {
+	position: relative;
+}
+
 .visually_hidden {
 	position: absolute;
 	width: 1px;
@@ -127,7 +169,7 @@ main {
 	padding: 0;
 	overflow: hidden;
 	border: 0;
-	clip: rect(0 0 0 0)
+	clip: rect(0 0 0 0);
 }
 
 .container {
