@@ -39,6 +39,25 @@
 	}
 }
 
+@mixin accordionContent($toggle_class: false) {
+	max-height: 0;
+	opacity: 0;
+
+	transition: max-height 0.2s linear, opacity 0.2s linear;
+
+	will-change: max-height;
+	overflow: hidden;
+	pointer-events: none;
+
+	@if ($toggle_class) {
+		#{$toggle_class} & {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+}
+
 // @function rem($size) {
 // 	@return $size / $root-font-size * 1rem;
 // }

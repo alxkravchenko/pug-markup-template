@@ -1,4 +1,5 @@
-import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
 
 const hero = () => {
 	const swiper = new Swiper('.swiper', {

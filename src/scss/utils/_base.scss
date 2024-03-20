@@ -3,14 +3,11 @@ html {
 	height: 100%;
 	text-size-adjust: 100%;
 
-	@include bp(1921px, min) {
-		font-size: calc(100vw / 1921 * 10);
-	}
-	@include bp(2200px, $point_7) {
+	@include bp($point_7, min) {
 		font-size: 62.5%;
 	}
 
-	@include bp(374px) {
+	@include bp($point_7 - 1) {
 		font-size: calc(100vw / 374 * 10);
 	}
 }
